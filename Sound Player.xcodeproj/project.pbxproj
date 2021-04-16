@@ -14,6 +14,7 @@
 		DF37C15826291EB40050C1FC /* Sound_Player.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = DF37C15626291EB40050C1FC /* Sound_Player.xcdatamodeld */; };
 		DF37C15A26291EC00050C1FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF37C15926291EC00050C1FC /* Assets.xcassets */; };
 		DF37C15D26291EC00050C1FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF37C15B26291EC00050C1FC /* LaunchScreen.storyboard */; };
+		DF37C16C26291FA80050C1FC /* bach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF37C16B26291FA80050C1FC /* bach.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		DF37C15926291EC00050C1FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF37C15C26291EC00050C1FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DF37C15E26291EC00050C1FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF37C16B26291FA80050C1FC /* bach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bach.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		DF37C14C26291EB40050C1FC /* Sound Player */ = {
 			isa = PBXGroup;
 			children = (
+				DF37C16A26291F580050C1FC /* sounds */,
 				DF37C14D26291EB40050C1FC /* AppDelegate.swift */,
 				DF37C14F26291EB40050C1FC /* SceneDelegate.swift */,
 				DF37C15126291EB40050C1FC /* ViewController.swift */,
@@ -68,6 +71,14 @@
 				DF37C15626291EB40050C1FC /* Sound_Player.xcdatamodeld */,
 			);
 			path = "Sound Player";
+			sourceTree = "<group>";
+		};
+		DF37C16A26291F580050C1FC /* sounds */ = {
+			isa = PBXGroup;
+			children = (
+				DF37C16B26291FA80050C1FC /* bach.mp3 */,
+			);
+			path = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF37C16C26291FA80050C1FC /* bach.mp3 in Resources */,
 				DF37C15D26291EC00050C1FC /* LaunchScreen.storyboard in Resources */,
 				DF37C15A26291EC00050C1FC /* Assets.xcassets in Resources */,
 				DF37C15526291EB40050C1FC /* Main.storyboard in Resources */,

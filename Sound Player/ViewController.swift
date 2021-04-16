@@ -6,12 +6,26 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    var player = AVAudioPlayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        if let path = Bundle.main.path(forResource: "bach", ofType: "mp3") {
+            let url = URL(fileURLWithPath: path)
+            do {
+                player = try AVAudioPlayer(contentsOf: url)
+                player.prepareToPlay()
+                player.play()
+            } catch {
+                
+            }
+                
+        }
     }
 
 
