@@ -25,6 +25,7 @@ class ViewController: UIViewController {
     
     @IBAction func stop(_ sender: Any) {
         player.stop()
+        player.currentTime = 0
         playButton.setImage(UIImage(named: "play"), for: .normal)
     }
     
