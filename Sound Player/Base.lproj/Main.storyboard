@@ -16,39 +16,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5UZ-2Y-4Fd">
-                                <rect key="frame" x="89" y="392" width="236" height="112"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ili-cn-chT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
-                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="19z-iv-CIH">
-                                        <rect key="frame" x="21" y="0.0" width="194" height="31"/>
-                                    </slider>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1m4-0Y-31d">
-                                        <rect key="frame" x="0.0" y="50" width="236" height="62"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5UZ-2Y-4Fd">
+                                        <rect key="frame" x="94" y="353" width="226" height="112"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNx-DG-wJs">
-                                                <rect key="frame" x="0.0" y="0.0" width="72" height="62"/>
-                                                <state key="normal" image="play"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vcu-D1-M4H">
-                                                <rect key="frame" x="82" y="0.0" width="72" height="62"/>
-                                                <state key="normal" image="pause"/>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfS-qk-Raz">
-                                                <rect key="frame" x="164" y="0.0" width="72" height="62"/>
-                                                <state key="normal" image="stop"/>
-                                            </button>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="19z-iv-CIH">
+                                                <rect key="frame" x="-2" y="0.0" width="230" height="31"/>
+                                            </slider>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="1m4-0Y-31d">
+                                                <rect key="frame" x="36" y="50" width="154" height="62"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNx-DG-wJs">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="62"/>
+                                                        <state key="normal" image="play"/>
+                                                        <connections>
+                                                            <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CDE-Kk-x9V"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BfS-qk-Raz">
+                                                        <rect key="frame" x="82" y="0.0" width="72" height="62"/>
+                                                        <state key="normal" image="stop"/>
+                                                        <connections>
+                                                            <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s5v-bv-3i7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="19z-iv-CIH" secondAttribute="trailing" id="EyQ-ZU-Xhj"/>
+                                            <constraint firstItem="19z-iv-CIH" firstAttribute="leading" secondItem="5UZ-2Y-4Fd" secondAttribute="leading" id="ta7-S5-6nc"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="5UZ-2Y-4Fd" firstAttribute="centerY" secondItem="Ili-cn-chT" secondAttribute="centerY" id="W7O-1b-dfg"/>
+                                    <constraint firstItem="5UZ-2Y-4Fd" firstAttribute="centerX" secondItem="Ili-cn-chT" secondAttribute="centerX" id="m0b-EC-lLr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5UZ-2Y-4Fd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UBi-Wa-JBE"/>
-                            <constraint firstItem="5UZ-2Y-4Fd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iWY-6s-i7v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ili-cn-chT" secondAttribute="trailing" id="66L-w1-eww"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Ili-cn-chT" secondAttribute="bottom" id="C3F-4r-pxv"/>
+                            <constraint firstItem="Ili-cn-chT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tsi-3U-NAH"/>
+                            <constraint firstItem="Ili-cn-chT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x8U-ke-OhE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playButton" destination="LNx-DG-wJs" id="X6V-0Q-X4D"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,7 +77,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pause" width="72" height="62"/>
         <image name="play" width="72" height="62"/>
         <image name="stop" width="72" height="62"/>
         <systemColor name="systemBackgroundColor">

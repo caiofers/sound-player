@@ -12,6 +12,22 @@ class ViewController: UIViewController {
 
     var player = AVAudioPlayer()
     
+    @IBOutlet weak var playButton: UIButton!
+    @IBAction func play(_ sender: Any) {
+        if player.isPlaying {
+            player.pause()
+            playButton.setImage(UIImage(named: "play"), for: .normal)
+        } else {
+            player.play()
+            playButton.setImage(UIImage(named: "pause"), for: .normal)
+        }
+    }
+    
+    @IBAction func stop(_ sender: Any) {
+        player.stop()
+        playButton.setImage(UIImage(named: "play"), for: .normal)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +36,6 @@ class ViewController: UIViewController {
             do {
                 player = try AVAudioPlayer(contentsOf: url)
                 player.prepareToPlay()
-                player.play()
             } catch {
                 
             }
