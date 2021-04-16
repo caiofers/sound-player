@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     var player = AVAudioPlayer()
     
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var volumeSlider: UISlider!
+    
     @IBAction func play(_ sender: Any) {
         if player.isPlaying {
             player.pause()
@@ -27,6 +29,10 @@ class ViewController: UIViewController {
         player.stop()
         player.currentTime = 0
         playButton.setImage(UIImage(named: "play"), for: .normal)
+    }
+    
+    @IBAction func changeVolume(_ sender: Any) {
+        player.volume = volumeSlider.value
     }
     
     override func viewDidLoad() {
